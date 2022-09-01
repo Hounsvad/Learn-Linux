@@ -10,24 +10,29 @@ That is to say, any files that are personal to a user are stored within a folder
 
 * **/etc** The etc directory is where configuration files are stored. These configuration files impact the whole system and as such ones specific to a user are stored within that user's home directory. When working with setup and services you are likely to run into the etc folder and the configs within.
 
-* **/usr** Finally among the folders you are likely to encounter first is the usr directory. This directory is where user utilities and programs are installed. If you were to develop a program and wanted to make it available to all users, this is where you would put it. Within the directory, you will also find a bin folder for storing the user program binaries the same way as with the /bin folder.
+* **/usr** Finally among the folders you are likely to encounter first is the usr directory. This directory is where user utilities and programs are installed. If you were to develop a program and wanted to make it available to all users, this is where you would put it. Within the directory, you will also find a bin folder for storing the user program binaries the same way as with the /bin folder.</br>
+
+## Referencing files and directories
+When referencing files we have three ways of doing so.
+* **From /** - We can reference files directly from root. An example of this could be ```cd /home/enigma/very_important_document.txt```</br>
+This way we always know exactly where we are targeting. The next cases can have may have 
 
 </br>
 
 # Learning the Linux command line with Enigma
-## 01 PWD
+## 01 pwd
 The first step of your Linux command line journey is to know where you are. For this, we have the command ```pwd``` which stands for _**p**rint **w**orking **d**irectory_.</br>
 This command will as it says tell you where in the directory structure you are.
-## 02 LS
+## 02 ls
 The next step after finding out where you are would be to have a look around. To see what is in a folder the command to use would be ```ls``` which is short for _list_ as it lists the contents of a directory.
-## 03 CD
-Knowing where we can go is great for our next step into the filesystem. To navigate the filesystem we have the command ```cd``` which is short for _Change Dirctory_. Using ```cd``` we can change where we are in the filesystem.
-## 04 CAT
+## 03 cd
+Knowing where we can go is great for our next step into the filesystem. To navigate the filesystem we have the command ```cd``` which is short for _Change Directory_. Using ```cd``` we can change where we are in the filesystem.
+## 04 cat
+Now that we know how to traverse the filesystem, we can start interacting with the files. One of the first things we might want, could be to see the contents of a file. To do this we can use the ```cat``` command. ```cat``` is short for concatenate.
 
-
-## 05 mkdir
-
-## 06 touch
+## 05 touch
+With the ability to navigate and explore files we need the ability to create them as well. To create a file we have the touch command. This command will create an empty file where you have specified.
+## 06 mkdir
 
 ## 07 cp
 
