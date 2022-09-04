@@ -68,12 +68,29 @@ cp -r /home/enigma/first-folder /home/enigma/third-folder
 
 ## 09 rm
 Now that we have strewn the filesystem with all of our new files and folder we need a way to delete them. To delete files and folders we have the `rm` command which is short for _Remove_. To remove a file we simply specify which file we would like to remove.
+
 ```bash
-rm /home/enigma/first-folder 
+rm /home/enigma/first-folder/important-document.txt
 ```
+
+Deleting folders, however, requires the use of the recursive option. This is the case for any folder no matter if it contains files or not.
+
+```bash
+rm -r /home/enigma/first-folder
+```
+
 ## 10 nano
 
+With power asserted over the files in our system, changing them becomes the next target for our learning adventure. Editing files can be done in many ways but one of the easier is with a text editor. Nano is an example of a text editor that runs in the terminal. It is one of the easier editors as it displays what you need to do on the screen. There are however a few quirks in that some of the instructions need to be translated to buttons on the keyboard. ^x for example means you need to press <kbd>ctrl</kbd> + <kbd>x</kbd> and M-u means you need to press <kbd>alt</kbd> + <kbd>u</kbd>.
+
+
+```bash
+nano /home/enigma/first-folder/important-document.txt
+```
+
+
 ## 11 find
+
 
 ## 12 passwd
 
