@@ -137,9 +137,16 @@ apt remove neofetch
 ```bash
 apt purge neofetch
 ```
-## 15 chmod
-
-## 16 chown
+## 15 chown
+Now that we have covered the most important things for a beginner, we can continue our journey into the more complex parts of Linux. </br>
+As we have discussed in the earlier exercises, ownership is a thing. This counts for both files as well as directories.
+To change the ownership of a file you will often need to use sudo as the instances where you need to change ownership usually coincide with you not having the ownership. Files and directories in Linux have two types of ownership. There is the user that owns the file, but there is also a group that is associated with the file.
+To change the ownership of a file using sudo, you can use this command.
+```bash
+sudo chown enigma:enigma-users /home/enigma/first-folder/important-document.txt
+```
+This command starts with the `sudo` command to run the `chown` command with administrator rights, then comes the `chown` command itself. The first thing specified in the `chown` command is the new owners specified as user:group where the username and the group name are separated using a single colon. Any further arguments added at the end of the command specify files that should receive the new ownership information. These files are separated with spaces.
+## 16 chmod
 
 ## 17 man
 
