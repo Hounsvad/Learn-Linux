@@ -103,6 +103,9 @@ find / -name 'important-document.txt'
 
 ## 12 passwd
 
+Linux is much more than just the filesystem, we have users, groups and much more. And with multiple users come differences in access, and that introduces the requirements of things like passwords. As such as a new user, you are likely to need a way to change your password.</br>
+If you want to change your password you simply need to run the command `passwd`. It will then prompt you to enter your password twice. If you enter your passwords correctly, you will now have your new password set.
+
 ## 13 sudo
 
 ## 14 apt
