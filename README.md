@@ -108,6 +108,10 @@ If you want to change your password you simply need to run the command `passwd`.
 
 ## 13 sudo
 
+When working within Linux, you are likely to encounter many things that you do not have the correct level of access to. Many things require you to have access to the root user. This, however, would require everyone with admin rights to know a common password for the root account.
+This is far from convinient and makes it harder to manage access. To fix this the ```sudo``` program comes into play. _sudo_ stands for _**S**uper **U**ser **DO**_. By prepending `sudo` to the front of your commands, they will be run as the root user instead of yourself. This is useful for things like installing programs or changing system configurations that are owned by the root user. </br>
+A caveat on using sudo is that you need to be registered in the sudo group to be able to run commands using sudo.
+
 ## 14 apt
 
 ## 15 chmod
