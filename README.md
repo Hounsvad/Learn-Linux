@@ -113,7 +113,30 @@ This is far from convinient and makes it harder to manage access. To fix this th
 A caveat on using sudo is that you need to be registered in the sudo group to be able to run commands using sudo.
 
 ## 14 apt
-
+All the programs we have referenced until now come standard with the distribution of Linux that we recommend for beginners (Ubuntu). When you want to install any other programs or update any already installed programs you will need a package manager. On Debian, Ubuntu or any other Debian based disto, ```apt``` is the default program to handle the installation of programs from the internet. </br>
+The first step to installing or updating programs using `apt` is to get the list of programs. To get the list we run apt with the sub-command update.
+```bash
+apt update
+```
+After updating the list of programs, we can search for the program that we are looking for. If you already know exactly what it is called, then you can skip directly to installing it, but if you are unsure of how it is written, or if there are multiple different versions you can use the search function. In this example, we will look for the program called neofetch which can give information about the computer that you are running on.
+```bash
+apt search neofetch
+```
+Now that we have ascertained that the program is indeed spelled neofetch in the repository we can go to installing it. To install we use the install subcommand of apt. When running it we might be prompted for many different things. Here it is important to read what it says, as majore problems can be caused by selecting the wrong thing.
+```bash
+apt install neofetch
+```
+We might also want to update our existing programs. For this, we can choose to just update everything at once by typing 'apt upgrade', which comes with the same caveats as install. We can also choose to upgrade only a specific package by adding the package name to the end of the command.
+```bash
+apt upgrade
+``` 
+When we want to uninstall a program we get two different options for it. We have the sub-command remove, which will uninstall the program, but it will leave configurations intact. The other option is the sub-command purge, which will uninstall the program, as well as remove any configuration made by the program.
+```bash
+apt remove neofetch
+```
+```bash
+apt purge neofetch
+```
 ## 15 chmod
 
 ## 16 chown
