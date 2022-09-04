@@ -91,6 +91,15 @@ nano /home/enigma/first-folder/important-document.txt
 
 ## 11 find
 
+Having control of files and their contents is good and all, but your average filesystem is extremely expansive. As such looking through every folder one at a time for the file you need can be very time-consuming and difficult. To solve this problem we have the program `find`. It will look through every folder that you have access to in search of the file you are looking for.
+
+To use the find command we first specify where to search. i.e. if you want to look everywhere we specify the root /. We can also specify multiple locations by separating them with a space. The second thing we specify is the name of the file that we are looking for. To specify this we add '-name' and then the name of the file that you are looking for encased in quotes.
+
+_Search for a file from root up called important-document.txt_
+
+```bash
+find / -name 'important-document.txt'
+```
 
 ## 12 passwd
 
