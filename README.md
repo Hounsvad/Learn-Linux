@@ -230,6 +230,11 @@ navigate the manual we use the arrow keys, and to quit the manual we hit 'q'
 
 ## 18 grep
 
+`Grep` is another awesome tool. It will allow us to search the contents of a file.
+```bash
+grep "secret phrase" ./important-file.txt
+```
+
 ## 19 less
 
 ## 20 Pipe |
