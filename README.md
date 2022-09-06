@@ -255,7 +255,15 @@ ls -la | less
 This way the output of ls is given to less as if it was a file and less is able to display it.
 Most other programs work in the same way and can, as such, be chained.
 
-## 22 tail and head
+## 21 Redirect >, >>
+
+It is also possible to redirect the output to a file. If we redirect the output using '>' we can write the output to said file. Using '>' will create the file if it does not already exist and will override an existing file. If we want to append the output to the file instead, we use '>>'.
+
+```bash
+ls -A1 > files_here.txt
+```
+
+## 22 apropos
 
 ## 23 apropos
 
