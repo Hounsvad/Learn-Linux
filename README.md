@@ -247,7 +247,13 @@ less ./important-file.txt
 
 ## 20 Pipe |
 
-## 21 Redirect > and >>
+One of the main tenets of Linux is to 'make every program a filter' this means that programs should be able to use take the input of other programs and send their results on afterward to the next program. To achive this we have standard out and standard in. These are something called a pipe, and can be thought of like a queue.
+Standard in is a pipe that represents input, and standard out represents output. When a program outputs non error output, it is most often done using standard out. Likewise many programs like `less` can take standard in as well. To pipe between programs like this, we join them with the pipe symbol '|'. An example could be if ls had a very long output that was hard to see in the terminal. We would then be able to pipe the results into less to be able to explore them like this.
+```bash
+ls -la | less
+```
+This way the output of ls is given to less as if it was a file and less is able to display it.
+Most other programs work in the same way and can, as such, be chained.
 
 ## 22 tail and head
 
