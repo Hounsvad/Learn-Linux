@@ -121,8 +121,7 @@ apt update
 After updating the list of programs, we can search for the program that we are looking for. If you already know exactly what it is called, then you can skip directly to installing it, but if you are unsure of how it is written, or if there are multiple different versions you can use the search function. In this example, we will look for the program called neofetch which can give information about the computer that you are running on.
 ```bash
 apt search neofetch
-```
-Now that we have ascertained that the program is indeed spelled neofetch in the repository we can go to installing it. To install we use the install subcommand of apt. When running it we might be prompted for many different things. Here it is important to read what it says, as majore problems can be caused by selecting the wrong thing.
+```important-document.txtbe caused by selecting the wrong thing.
 ```bash
 apt install neofetch
 ```
@@ -147,6 +146,73 @@ sudo chown enigma:enigma-users /home/enigma/first-folder/important-document.txt
 ```
 This command starts with the `sudo` command to run the `chown` command with administrator rights, then comes the `chown` command itself. The first thing specified in the `chown` command is the new owners specified as user:group where the username and the group name are separated using a single colon. Any further arguments added at the end of the command specify files that should receive the new ownership information. These files are separated with spaces.
 ## 16 chmod
+While knowing about ownership is good, there is more to accessing files than just that. Files and folders have something called modes. Modes describe whether the owner, the group or others can read, write or execute a file. The Mode is assigned "individually" for the owner, the group and others. </br>
+When using the command `ls -la` we are presented with results that also show the modes for the files and folders present. This is an example of the output.
+```bash
+total 120
+drwxr-xr-x  3 enigma enigma  4096 Sep  6 20:27 .
+drwxr-xr-x  4 root   root    4096 Sep  6 20:14 ..
+-rw-------  1 enigma enigma   213 Sep  6 20:20 .bash_history
+-rw-r--r--  1 enigma enigma   220 Apr 18  2019 .bash_logout
+-rw-r--r--  1 enigma enigma  3526 Apr 18  2019 .bashrc
+-rw-r--r--  1 enigma enigma    89 Sep  6 20:25 hello_world.cpp
+-rwxr-xr-x  1 enigma enigma 16544 Sep  6 20:26 hello_world_program
+drwxr-xr-x 12 enigma enigma  4096 Sep  6 20:20 .oh-my-zsh
+-rw-r--r--  1 enigma enigma   807 Apr 18  2019 .profile
+-rw-------  1 enigma enigma  1664 Sep  6 20:25 .viminfo
+-rw-r--r--  1 enigma enigma 50765 Sep  6 20:22 .zcompdump-testmachine-5.8
+-rw-------  1 enigma enigma   446 Sep  6 20:27 .zsh_history
+-rw-r--r--  1 enigma enigma  3858 Sep  6 20:21 .zshrc
+-rw-r--r--  1 enigma enigma    29 Sep  6 20:19 .zshrc.pre-oh-my-zsh
+```
+
+On the left, we see a bunch of letters and dashes. The left-most letter is 'd' if the item is a directory or a '-' if it is a file. The next three letters describe the Modes for the user, followed by three for groups mode, and three for the mode for others. </br>
+The letters have the following meanings: </br>
+* r - This means 'read' and if specified gives read permissions. Read permission means being able to see the contents of a folder, or being able to read the contents of a file.
+* w - This means 'write' and if specified permits changing the contents of a file or adding files to a directory.
+* x - This means 'execute' and specifies that a file can be run as code or that a directory can be traversed. 
+
+These file permissions can also be described with a single number for the user, the group and others. An example could be '754' where 7 is the permissions for the user, 5 for the group and 4 for others.
+The modes each have a numerical value, that is summed up to give the mode.
+* r - 4
+* w - 2
+* x - 1
+
+The astute might notice that these correspond to binary, and they would be correct. These are binary flags.
+If you want to give a file read and write, you activate the read and write bit resulting in 0b110 or 6.
+
+### Assigning permissions
+When assigning permissions there are two ways of doing it. You can assign the permissions by specifying the three-digit value for the permissions. The other way is to use a more complicated syntax that let you change different parts separately. The program that is used to assign permissions is called `chmod` which is a contraction of _change mode_
+#### The numeric way
+When assigning the numeric way we use the following command:
+```bash
+chmod 754 /home/enigma/first-folder/important-document.txt
+```
+The command starts by specifying the permissions we want to set, followed by a list of files and or folders that we want to set the permissions for.
+
+It is also possible to specify that the changes should be made recoursivly if done on a folder. This is done with the option '-R' placed just after the command itself
+```bash
+chmod -R 754 /home/enigma/first-folder
+```
+
+#### The other way
+The other way involves firstly specifying who you want to change permissions for. This is done with four different letter. 'u' for user, 'g' for group, 'o' for other, and 'a' for all. You can also omit to specify the first letter, which will be the same as using 'a'. The second thing we specify is how we want to change the permissions. We can add with '+', subtract with '-' or set to exactly with '='. The third thing specified are the permissions that we are setting.
+
+
+This will add the permissions x and r to the users mode without affecting the other modes
+```bash
+chmod u+xr ./important-document.txt
+```
+
+This will remove the execute permission from the group and others without affecting the users modes
+```bash
+chmod go-x ./important-document.txt
+```
+
+This will set the groups mode to exactly rx without affecting the modes of the user and other
+```bash
+chmod g=rx
+```
 
 ## 17 man
 
