@@ -264,7 +264,21 @@ ls -A1 > files_here.txt
 ```
 
 ## 22 apropos
+Now that you have seen an extreme amount of commands, you might think: "how am I supposed to know which command to use." Fret not. We have the `apropos` command. It will search the man pages for what you want to know. As an example, if you wanted to know something about pdf, you would type the following:
+```bash
+apropos pdf
+```
+It will then return the titles for all the man pages that reference pdf. You can then go through the pages one by one to see if the specific thing does what you want.
 
-## 23 apropos
+## 23 ; && ||
+
+Some commands take a while to run, as such you might want to have something run after the first command is done. To do this we have the semicolon. It can be put at the end of a command and allow you to chain another command right after.
+```bash
+touch testfile; chmod 600 ./testfile; echo "Secrets" > testfile
+```
+This way we can create a file, change the permissions for the file, and then add some text to it without having to way for each command to finish.
+
+We might however limit the commands to only run if the previous command succeeded. To do this we combine the command with '&&' instead of ';'. This way the second command won't be run unless the first one succeeded. Similarly, we might want to run something only if the previous command failed, and for that, we have '||'
+
 
 ## 24 ; && ||
