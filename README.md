@@ -154,9 +154,9 @@ This command starts with the `sudo` command to run the `chown` command with admi
 
 ## 19 less
 
-## 20 |
+## 20 Pipe |
 
-## 21 > and >>
+## 21 Redirect > and >>
 
 ## 22 tail and head
 
