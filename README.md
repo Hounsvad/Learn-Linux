@@ -280,5 +280,12 @@ This way we can create a file, change the permissions for the file, and then add
 
 We might however limit the commands to only run if the previous command succeeded. To do this we combine the command with '&&' instead of ';'. This way the second command won't be run unless the first one succeeded. Similarly, we might want to run something only if the previous command failed, and for that, we have '||'
 
+## 24 tail and head
 
-## 24 ; && ||
+Finally for this lesson we have the utilities `head` and `tail`, which, much like cat, returns the contents of a file. However, they only return a certain number of lines from either the beginning or end of the file.
+
+```bash
+head files_here.txt -n 1
+```
+Here we use the option -n to specify how many lines we want (in this case 1).
+Tail works the exact same way, it will just return the last line instead.
