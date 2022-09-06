@@ -237,6 +237,14 @@ grep "secret phrase" ./important-file.txt
 
 ## 19 less
 
+Less is also one of the many great tools available, and you have in fact already met this tool. When we invoke `man` it, in turn, invokes `less` to show us the contents of the manual in a navigable way.
+
+When less is invoked it takes the contents of the file and brings it into a view that is navigable with the arrow keys instead of just dumping it into the terminal like `cat` does. </br>
+To invoke less we give less the file we want to see as argument.
+```bash
+less ./important-file.txt
+```
+
 ## 20 Pipe |
 
 ## 21 Redirect > and >>
