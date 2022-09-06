@@ -215,6 +215,18 @@ chmod g=rx
 ```
 
 ## 17 man
+After seeing the complexities of many of the previous commands, you are probably wondering how you are going to remember how everything works. For that, we have the `man` command which is short for _manual_.</br>
+It is very simple to use the `man` command. We simply prepend man to any command that we wish to have the manual for and voila a manual will be presented.
+An example could be:
+```bash
+man chmod
+```
+or
+```bash
+man man
+```
+navigate the manual we use the arrow keys, and to quit the manual we hit 'q'
+
 
 ## 18 grep
 
