@@ -23,20 +23,50 @@ Should we find ourselves within the "inner-folder" from before, we can also navi
 ```cd ../../second-folder ``` This will take us two levels up, and then down into "second-folder"
 * **Direct Reference** - We can also reference files and folders directly without using the '.'. </br>
 Using our example from before and assuming we are standing in the users home folder. `cd first-folder` will work the same as `cd ./first-folder`. There are however programs which don't support this syntax so if you don't want to worry, you can use two other methods.
+* **Navigation from your home** - We also have a home directory in Linux, for the user enigma, the home directory would usually be /home/enigma. We can use '~' as an alias for this directory. i.e. `cd ~` to navigate to /home/enigma or `cd ~/first-folder` to navigate to /home/enigma/first-folder
 
 
 # Learning the Linux command line with Enigma
 ## 01 pwd 
 The first step of your Linux command line journey is to know where you are. For this, we have the command ```pwd``` which stands for _**p**rint **w**orking **d**irectory_.</br>
-This command will as it says tell you where in the directory structure you are.
+This command will as it says tell you where in the directory structure you are. Using the command requires nothing but entering it and hitting enter.
 ## 02 ls
-The next step after finding out where you are would be to have a look around. To see what is in a folder the command to use would be ```ls``` which is short for _list_ as it lists the contents of a directory.
+The next step after finding out where you are would be to have a look around. To see what is in a folder the command to use would be ```ls``` which is short for _list_ as it lists the contents of a directory. </br>
+`ls` is used in different ways. You can use it without specifying a directory which will yield the contents of the current directory. You can also specify a directory for which it should display its contents.
+```bash
+ls
+```
+```bash
+ls ./first-folder/inner-folder
+```
+We also have options that we can add to the command. A very common combination of options is '-l -a' or just '-la'. This combination of options will show all the files in a list format that also shows other information about the files such as owners, size, permissions and more.
+```bash
+ls -la ./first-folder
+```
 ## 03 cd
-Knowing where we can go is great for our next step into the filesystem. To navigate the filesystem we have the command ```cd``` which is short for _**C**hange **D**irectory_. Using ```cd``` we can change where we are in the filesystem.
+
+Knowing where we can go is great for our next step into the filesystem. To navigate the filesystem we have the command ```cd``` which is short for _**C**hange **D**irectory_. Using ```cd``` we can change where we are in the filesystem. </br>
+To use the `cd` command we specify where we want to go.
+```bash
+cd first-folder
+```
+```bash
+cd /home/enigma/first-folder
+```
 ## 04 cat
-Now that we know how to traverse the filesystem, we can start interacting with the files. One of the first things we might want, could be to see the contents of a file. To do this we can use the ```cat``` command. ```cat``` is short for _concatenate_.
+Now that we know how to traverse the filesystem, we can start interacting with the files. One of the first things we might want could be to see the contents of a file. To do this we can use the ```cat``` command. ```cat``` is short for _concatenate_. </br>
+To use `cat` we specify the file that we want the contents of.
+```bash
+cat /home/enigma/first-folder/important-document.txt
+```
+
 ## 05 touch
-With the ability to navigate and explore files we need the ability to create them as well. To create a file we have the touch command. This command will create an empty file where you have specified.
+With the ability to navigate and explore files we need the ability to create them as well. To create a file we have the touch command. This command will create an empty file where you have specified. </br>
+To create a file using touch we specify the file that we want to create where we want to create it.
+Assuming that the file important-document.txt does not exist within the folder first-document, we can create it with the following command.
+```bash
+touch 
+```
 ## 06 mkdir
 We now have to knowledge to create file, so now we will explorer the creation of folders. To create a folder we use the command ```mkdir``` which is short form for _Make Directory_. 
 ## 07 mv
