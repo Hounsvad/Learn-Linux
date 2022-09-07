@@ -1,3 +1,5 @@
+# This set of instructions and exercises expect you to be on a Debian based os
+
 # The Linux Filesystem
 
 Linux has a file structure that will seem familiar and yet unfamiliar if you come from Windows.</br> Files in Linux are structured with the "root" of the filesystem being "/" unlike Windows where you would expect something like "C:\\" as the root. Another difference is the use of "/" (forward slash) on Linux as opposed to "\\" (back slash) on Windows.</br>
