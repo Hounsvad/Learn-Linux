@@ -15,9 +15,15 @@ That is to say, any files that are personal to a user are stored within a folder
 ## Referencing files and directories
 When referencing files we have three ways of doing so.
 * **From /** - We can reference files directly from root. An example of this could be ```cd /home/enigma/very_important_document.txt```</br>
-This way we always know exactly where we are targeting. The next cases can have may have 
+This way we always know exactly where we are targeting. The next cases are dependent on where in the operating system you are standing.
+* **From . or ..** - we have access to files called '.' and '..'. These files reference the folder we are in or the parent of the current folder.
+by setting a single '.' we are referencing the current folder. So if we want to tell a program to use the current folder, we can do it this way. We can also reference things further down by starting here. </br> ```cd ./first-folder/inner-folder```</br>
+Should we find ourselves within the "inner-folder" from before, we can also navigate outwards by using '..'. </br>
+```cd ..``` This will navigate us one folder up. Now assume that there is a "second-folder" on the same level as "first-folder" and we are still in "inner-folder" </br>
+```cd ../../second-folder ``` This will take us two levels up, and then down into "second-folder"
+* **Direct Reference** - We can also reference files and folders directly without using the '.'. </br>
+Using our example from before and assuming we are standing in the users home folder. `cd first-folder` will work the same as `cd ./first-folder`. There are however programs which don't support this syntax so if you don't want to worry, you can use two other methods.
 
-</br>
 
 # Learning the Linux command line with Enigma
 ## 01 pwd 
