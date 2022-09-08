@@ -42,6 +42,7 @@ ls
 ls ./first-folder/inner-folder
 ```
 We also have options that we can add to the command. A very common combination of options is '-l -a' or just '-la'. This combination of options will show all the files in a list format that also shows other information about the files such as owners, size, permissions and more.
+Showing files is more of a thing as some files and folders get hidden in the normal ls if they begin with a '.'
 ```bash
 ls -la ./first-folder
 ```
