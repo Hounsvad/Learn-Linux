@@ -1,4 +1,36 @@
-# This set of instructions and exercises expect you to be on a Debian based os
+# This set of instructions and exercises expect you to be on a Debian based os such as Debian itself or something like Ubuntu
+
+# *Table of contents*
+1. [The Linux Filesystem](#the-linux-filesystem)\
+1.01. [Referencing files and directories](#referencing-files-and-directories)
+2. [Learning the Linux command line with Enigma](#learning-the-linux-command-line-with-enigma)\
+2.01. [pwd](#01-pwd)\
+2.02. [ls](#02-ls)\
+2.03. [cd](#03-cd)\
+2.04. [cat](#04-cat)\
+2.05. [touch](#05-touch)\
+2.06. [mkdir](#06-mkdir)\
+2.07. [mv](#07-mv)\
+2.08. [cp](#08-cp)\
+2.09. [rm](#09-rm)\
+2.10. [nano](#10-nano)\
+2.11. [find](#11-find)\
+2.12. [passwd](#12-passwd)\
+2.13. [sudo](#13-sudo)\
+2.14. [apt](#14-apt)\
+2.15. [chown](#15-chown)\
+2.16. [chmod](#16-chmod)\
+2.16.1. [Assigning Permissions](#assigning-permissions)\
+2.16.1.1. [The numeric way](#the-numeric-way)\
+2.16.1.2. [The other way](#the-other-way)\
+2.17. [man](#17-man)\
+2.18. [grep](#18-grep)\
+2.19. [less](#19-less)\
+2.20. [Pipe |](#20-pipe)\
+2.21. [Redirect >, >>](#21-redirect)\
+2.22. [apropos](#22-apropos)\
+2.23. [command chaining ;, &&, ||](#23-command-chaining)\
+2.24. [tail and head](#24-tail-and-head)
 
 # The Linux Filesystem
 
@@ -309,7 +341,7 @@ apropos pdf
 ```
 It will then return the titles for all the man pages that reference pdf. You can then go through the pages one by one to see if the specific thing does what you want.
 
-## 23 ; && ||
+## 23 command chaining ; && ||
 
 Some commands take a while to run, as such you might want to have something run after the first command is done. To do this we have the semicolon. It can be put at the end of a command and allow you to chain another command right after.
 ```bash
