@@ -1,4 +1,4 @@
-# This set of instructions and exercises expect you to be on a Debian based os such as Debian itself or something like Ubuntu
+# This set of instructions and exercises expecting you to be on a Debian based os such as Debian itself or something like Ubuntu
 
 # *Table of contents*
 1. [The Linux Filesystem](#the-linux-filesystem)\
